@@ -16,7 +16,7 @@ local dl = require("luasnip.extras").dynamic_lambda
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 
-return {
+ls.add_snippets("markdown", {
   s({ trig = ";a", snippetType = "autosnippet" }, { t("\\alpha") }),
   s({ trig = ";b", snippetType = "autosnippet" }, { t("\\beta") }),
   s({ trig = ";g", snippetType = "autosnippet" }, { t("\\gamma") }),
@@ -32,4 +32,4 @@ return {
   s({ trig = "psi", snippetType = "autosnippet" }, { t("\\psi") }),
   s({ trig = "eta", snippetType = "autosnippet" }, { t("\\eta") }),
   s({ trig = "tau", snippetType = "autosnippet" }, { t("\\tau") }),
-}
+})

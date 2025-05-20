@@ -10,7 +10,7 @@ return {
         enable_autosnippets = true,
         store_selection_keys = "`",
       })
-      require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/LuaSnip/" })
+      require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/LuaSnip" })
       local auto_expand = require("luasnip").expand_auto
       require("luasnip").expand_auto = function(...)
         vim.o.undolevels = vim.o.undolevels
