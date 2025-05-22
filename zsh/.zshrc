@@ -11,3 +11,8 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 # Activate autosuggestion 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# alias for shortcuts 
+alias v='nvim'
+alias lsa='ls -A'
+alias gits='git status'

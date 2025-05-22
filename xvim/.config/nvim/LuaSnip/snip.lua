@@ -29,6 +29,7 @@ ls.add_snippets("lua", {
         local fmt = require("luasnip.extras.fmt").fmt
         local fmta = require("luasnip.extras.fmt").fmta
         local rep = require("luasnip.extras").rep
+        local tex = require("util.latex")
 
         ls.add_snippets("<>", {
           <>
