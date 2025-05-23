@@ -16,3 +16,12 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias v='nvim'
 alias lsa='ls -A'
 alias gits='git status'
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/xiangjunyi/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
