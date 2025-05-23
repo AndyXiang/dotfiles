@@ -1,0 +1,7 @@
+[user]
+	name = Junyi Xiang
+	email = xjy03@hust.edu.cn
+[https]
+	postBuffer = 524288000
+[http]
+	postBuffer = 524288000
