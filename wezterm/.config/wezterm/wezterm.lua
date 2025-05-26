@@ -9,6 +9,7 @@ local act = wezterm.action
 -- Configs following
 config.font_size = 20
 config.font = wezterm.font_with_fallback({
+	{ family = "Iosevka", weight = "Book" },
 	{ family = "0xProto Nerd Font Mono", weight = "Book" },
 })
 config.window_decorations = "RESIZE"

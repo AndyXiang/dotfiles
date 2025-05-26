@@ -16,6 +16,10 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias v='nvim'
 alias lsa='ls -A'
 alias gits='git status'
+alias gita='git add *'
+alias cdf='cd ..'
+
+
 
 # >>> juliaup initialize >>>
 
