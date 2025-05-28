@@ -18,7 +18,11 @@ alias lsa='ls -A'
 alias gits='git status'
 alias gita='git add *'
 alias cdf='cd ..'
-
+alias cdr='cd ~'
+alias python='python3'
+alias snip='v ~/.config/nvim/LuaSnip'
+alias vconf='v ~/.config/nvim'
+alias vnote='v ~/Documents/Notes'
 
 
 # >>> juliaup initialize >>>
@@ -29,3 +33,11 @@ path=('/Users/xiangjunyi/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
+
+. "$HOME/.local/bin/env"
+
+# python venv activate 
+# pyact ()
+# {
+#   if 
+# }

@@ -23,6 +23,7 @@ config.window_background_opacity = 0.9
 config.keys = {
 	{ key = "RightArrow", mods = "CMD", action = act({ ActivateTabRelative = 1 }) },
 	{ key = "LeftArrow", mods = "CMD", action = act({ ActivateTabRelative = -1 }) },
+	{ key = "N", mods = "CMD", action = act.ToggleFullScreen },
 }
 
 return config

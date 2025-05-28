@@ -63,7 +63,7 @@ ls.add_snippets("lua", {
             <>,
             { <> }
           ),
-          { condition = tex.in_latex }
+          { condition = tex.in_mathzone }
         ),
       ]],
       { i(1), i(2), i(3), i(4) }

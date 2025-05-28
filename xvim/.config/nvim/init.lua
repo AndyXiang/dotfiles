@@ -30,3 +30,15 @@ require("luasnip").config.set_config({ -- Setting LuaSnip config
   -- Use Tab (or some other key if you prefer) to trigger visual selection
   store_selection_keys = "<Tab>",
 })
+
+require("render-markdown").setup({
+  latex = {
+    enabled = true,
+    render_modes = false,
+    converter = "latex2text",
+    highlight = "RenderMarkdownMath",
+    position = "above",
+    top_pad = 0,
+    bottom_pad = 0,
+  },
+})

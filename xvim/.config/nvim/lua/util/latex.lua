@@ -27,7 +27,7 @@ end
 M.in_text = function()
   local node = ts_utils.get_node_at_cursor()
   while node do
-    if node:type() == "text_mode" then
+    if node:type() == "text" then
       return true
     elseif MATH_NODES[node:type()] then
       return false
@@ -39,14 +39,16 @@ end
 
 M.in_latex = function()
   local node = ts_utils.get_node_at_cursor()
+  local i = 1
   while node do
+    print(node:type())
+    print(i)
     if node:type() == "latex_block" then
-      print(true)
       return true
     end
     node = node:parent()
+    i = i + 1
   end
-  print(false)
   return false
 end
 
