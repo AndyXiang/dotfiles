@@ -11,6 +11,11 @@ local rep = require("luasnip.extras").rep
 local tex = require("util.latex")
 
 ls.add_snippets("markdown", {
-  s({ trig = "->", dscr = "right arrow", snippetType = "autosnippet" }, t("\\to"), { condition = tex.in_latex }),
-  s({ trig = "<-", dscr = "left arrow", snippetType = "autosnippet" }, t("\\gets"), { condition = tex.in_latex }),
+  s({ trig = "->", dscr = "right arrow", snippetType = "autosnippet" }, t("\\to"), { condition = tex.in_math }),
+  s({ trig = "<-", dscr = "left arrow", snippetType = "autosnippet" }, t("\\gets"), { condition = tex.in_math }),
+  s(
+    { trig = "=>", dscr = "long right arrow", snippetType = "autosnippet" },
+    t("\\implies"),
+    { condition = tex.in_math }
+  ),
 })

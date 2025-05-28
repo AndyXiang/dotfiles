@@ -6,6 +6,8 @@ local MATH_NODES = {
   math_environment = true,
 }
 
+M.MATH_NODES = MATH_NODES
+
 local ts_utils = require("nvim-treesitter.ts_utils")
 
 M.in_env = function(env)
@@ -27,7 +29,7 @@ end
 M.in_text = function()
   local node = ts_utils.get_node_at_cursor()
   while node do
-    if node:type() == "text" then
+    if node:type() == "text_mode" then
       return true
     elseif MATH_NODES[node:type()] then
       return false
@@ -37,17 +39,13 @@ M.in_text = function()
   return true
 end
 
-M.in_latex = function()
+M.in_math = function()
   local node = ts_utils.get_node_at_cursor()
-  local i = 1
   while node do
-    print(node:type())
-    print(i)
-    if node:type() == "latex_block" then
+    if MATH_NODES[node:type()] then
       return true
     end
     node = node:parent()
-    i = i + 1
   end
   return false
 end
