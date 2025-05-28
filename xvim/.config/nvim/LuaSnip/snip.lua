@@ -29,7 +29,6 @@ ls.add_snippets("lua", {
         local fmt = require("luasnip.extras.fmt").fmt
         local fmta = require("luasnip.extras.fmt").fmta
         local rep = require("luasnip.extras").rep
-        local tex = require("util.latex")
 
         ls.add_snippets("<>", {
           <>
@@ -38,6 +37,8 @@ ls.add_snippets("lua", {
       { i(1), i(2) }
     )
   ),
+  s({ trig = "mdutil", dscr = "insert util.markdown" }, fmta([[local md = require("util.markdown")]], {})),
+  s({ trig = "latexutil", dscr = "insert util.latex" }, fmta([[local tex = require("util.latex")]], {})),
   s(
     { trig = "snip", dscr = "template of one snippet", snippetType = "autosnippet" },
     fmta(
@@ -63,7 +64,7 @@ ls.add_snippets("lua", {
             <>,
             { <> }
           ),
-          { condition = tex.in_math }
+          { condition = md.in_math }
         ),
       ]],
       { i(1), i(2), i(3), i(4) }

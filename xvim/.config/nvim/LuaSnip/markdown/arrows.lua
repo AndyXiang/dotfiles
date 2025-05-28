@@ -8,14 +8,11 @@ local d = ls.dynamic_node
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
-local tex = require("util.latex")
+local md = require("util.markdown")
 
 ls.add_snippets("markdown", {
-  s({ trig = "->", dscr = "right arrow", snippetType = "autosnippet" }, t("\\to"), { condition = tex.in_math }),
-  s({ trig = "<-", dscr = "left arrow", snippetType = "autosnippet" }, t("\\gets"), { condition = tex.in_math }),
-  s(
-    { trig = "=>", dscr = "long right arrow", snippetType = "autosnippet" },
-    t("\\implies"),
-    { condition = tex.in_math }
-  ),
+  s({ trig = "->", dscr = "right arrow", snippetType = "autosnippet" }, t("\\to"), { condition = md.in_math }),
+  s({ trig = "<-", dscr = "left arrow", snippetType = "autosnippet" }, t("\\gets"), { condition = md.in_math }),
+  s({ trig = "=>", dscr = "implies", snippetType = "autosnippet" }, t("\\implies"), { condition = md.in_math }),
+  s({ trig = "<=", dscr = "ge", snippetType = "autosnippet" }, t("\\ge"), { condition = md.in_math }),
 })

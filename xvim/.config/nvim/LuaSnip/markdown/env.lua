@@ -8,11 +8,11 @@ local d = ls.dynamic_node
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
-local tex = require("util.latex")
+local md = require("util.markdown")
 
 ls.add_snippets("markdown", {
   s(
-    { trig = "align", dscr = "insert align environment in mathzone", snippetType = "autosnippet" },
+    { trig = "align", dscr = "insert align environment in math", snippetType = "autosnippet" },
     fmta(
       [[
         \begin{align}
@@ -21,7 +21,7 @@ ls.add_snippets("markdown", {
       ]],
       { i(1) }
     ),
-    { condition = tex.in_mathzone }
+    { condition = md.in_math }
   ),
   s(
     { trig = "pmat", dscr = "insert pmatrix env", snippetType = "autosnippet" },
@@ -33,7 +33,7 @@ ls.add_snippets("markdown", {
       ]],
       { i(1) }
     ),
-    { condition = tex.in_mathzone }
+    { condition = md.in_math }
   ),
   s(
     { trig = "bmatrix", dscr = "insert bmatrix", snippetType = "autosnippet" },
@@ -45,6 +45,6 @@ ls.add_snippets("markdown", {
       ]],
       { i(1) }
     ),
-    { condition = tex.in_mathzone }
+    { condition = md.in_math }
   ),
 })

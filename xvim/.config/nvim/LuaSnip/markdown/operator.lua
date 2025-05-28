@@ -11,19 +11,6 @@ local rep = require("luasnip.extras").rep
 local md = require("util.markdown")
 
 ls.add_snippets("markdown", {
-  s(
-    { trig = "meta", dscr = "adding meta information in md file" },
-    fmta(
-      [[
-        ---
-        updated: <>
-        tags:
-          - <>
-        ---
-      
-        # <>
-      ]],
-      { i(1), i(2), i(3) }
-    )
-  ),
+  s({ trig = "cup", dscr = "set union", snippetType = "autosnippet" }, t("\\cup"), { condition = md.in_math }),
+  s({ trig = "cap", dscr = "set intersection", snippetType = "autosnippet" }, t("\\cap"), { condition = md.in_math }),
 })
