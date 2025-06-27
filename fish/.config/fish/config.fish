@@ -38,6 +38,8 @@ function config
     end
     if [ (count $argv) -eq 1 ]
         switch $argv[1]
+            case fish
+                nvim ~/.config/fish
             case kitty
                 nvim ~/.config/kitty
             case nvim
