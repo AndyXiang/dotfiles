@@ -127,10 +127,10 @@
   },
   "clock": {
     "interval": 1,
-    "timezone": "Asia/Chengdu",
-    "format": "  {:%H:%M} ",
-    "tooltip": true,
-    "tooltip-format": "{:L%Y - %m- %d, %A}"
+    "timezone": "Asia/Shanghai",
+    "format": "  {:L%Y - %m - %d, :%H:%M} ",
+    // "tooltip": true,
+    // "tooltip-format": "{:L%Y - %m - %d, %A}"
   },
   "tray": {
     "icon-size": 17,
