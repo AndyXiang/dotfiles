@@ -1,0 +1,11 @@
+linux
+unix
+usr
+config
+fstab
+systemd
+initrd
+initramfs
+USBs
+srv
+tmpfs
