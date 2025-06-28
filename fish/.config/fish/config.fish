@@ -13,6 +13,10 @@ source $VIMRC
 alias lsa='ls -a'
 alias cdf='cd ..'
 alias v='nvim'
+alias note='nvim ~/documents/note'
+
+alias gits='git status'
+alias gitc='git commit'
 
 # a function example
 # function my_func
@@ -33,21 +37,21 @@ alias v='nvim'
 function config
     if [ -z "$argv" ] # no argument
         # open fish config by default
-        nvim ~/.config/fish
+        nvim ~/.config/fish/config.fish
         return
     end
     if [ (count $argv) -eq 1 ]
         switch $argv[1]
             case fish
-                nvim ~/.config/fish
+                nvim ~/.config/fish/config.fish
             case kitty
-                nvim ~/.config/kitty
+                nvim ~/.config/kitty/kitty.conf
             case nvim
                 nvim ~/.config/nvim
             case hyprland
-                nvim ~/.config/hypr
+                nvim ~/.config/hypr/hyprland.conf
             case hypr
-                nvim ~/.config/hypr
+                nvim ~/.config/hypr/hyprland.conf
             case starship
                 nvim ~/.config/starship
             case waybar
@@ -55,7 +59,7 @@ function config
             case dunst
                 nvim ~/.config/dunst
             case fastfetch
-                nvim ~/.config/fastfetch
+                nvim ~/.config/fastfetch/config.jsonc
                 # case thunar
                 #     nvim ~/.config/Thunar
         end
