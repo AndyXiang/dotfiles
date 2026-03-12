@@ -1,0 +1,7 @@
+[user]
+	name = Junyi Xiang
+	email = eldingx03@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
