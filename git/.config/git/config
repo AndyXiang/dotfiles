@@ -5,3 +5,9 @@
 	defaultBranch = main
 [core]
 	autocrlf = input
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	lg = log --oneline --graph --decorate --all
