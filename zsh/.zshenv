@@ -1,5 +1,8 @@
 # environment variables
 
+# default editor
+export EDITOR=nvim
+
 # zsh configs directory
 export ZDOTDIR="$HOME/.config/zsh"
 
