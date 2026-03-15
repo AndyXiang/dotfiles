@@ -6,7 +6,10 @@ require("keymaps")
 
 -- import ls configs
 -- rust
-local rls = require("lsp.rls")
-vim.lsp.config('rust_analyzer', rls)
+local rust_analyzer = require("lsp.rust_analyzer")
+vim.lsp.config('rust_analyzer', rust_analyzer)
 vim.lsp.enable('rust_analyzer')
 
+local pyright = require("lsp.pyright")
+vim.lsp.config('pyright', pyright)
+vim.lsp.enable('pyright')
