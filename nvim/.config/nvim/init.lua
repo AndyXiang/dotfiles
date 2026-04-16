@@ -14,9 +14,8 @@ local pyright = require("lsp.pyright")
 vim.lsp.config('pyright', pyright)
 vim.lsp.enable('pyright')
 
-require("nekonight").setup({
-  style = "night",
-  transparent = false,
-})
+-- require("nekonight").setup({
+--   style = "night",
+-- })
 
-vim.cmd.colorscheme("nekonight")
+vim.cmd.colorscheme("tokyonight")
