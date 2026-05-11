@@ -14,7 +14,7 @@ config.font = wezterm.font_with_fallback({
 })
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true 
 config.color_scheme = "Tokyo Night"
 config.window_close_confirmation = "NeverPrompt"
 

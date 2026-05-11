@@ -2,9 +2,9 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- better cursor movements
-map("n", "H", "0w", { silent = true, desc = "move cursor to the begin of line"} )
+map("n", "H", "0", { silent = true, desc = "move cursor to the begin of line"} )
 map("n", "L", "$", { silent = true, desc = "move cursor to the end of line"} )
-map("v", "H", "0w", { silent = true, desc = "move cursor to the begin of line"} )
+map("v", "H", "0", { silent = true, desc = "move cursor to the begin of line"} )
 map("v", "L", "$", { silent = true, desc = "move cursor to the end of line"} )
 
 map("n", "j", "gj", { silent = true, desc = "jump between screen lines, not file lines."} )
